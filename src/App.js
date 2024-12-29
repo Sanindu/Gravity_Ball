@@ -3,11 +3,11 @@ import AnimatedBall from './components/Ball';
 import './App.css';
 
 const App = () => {
-  const [acceleration, setAcceleration] = useState(9.81); // Default to Earth's gravity
+  const [acceleration, setAcceleration] = useState(9.81);
   const [start, setStart] = useState(false);
   const [velocity, setVelocity] = useState(0);
   const [time, setTime] = useState(0);
-  const containerHeight = 500; // Container height in pixels
+  const containerHeight = 500;
 
   const planets = [
     { name: 'Mercury', value: 3.7 },
@@ -58,12 +58,12 @@ const App = () => {
         >
           {planets.map((planet) => (
             <option key={planet.name} value={planet.value}>
-               {planet.name}
+              {planet.name}
             </option>
           ))}
         </select>
       </label>
-      <button onClick={() => setStart(true)}>Start</button>
+      <button onClick={() => setStart(true)} disabled={start}>Start</button>
       <button onClick={handleReset}>Reset</button>
       {start && (
         <div className="info-panel">
@@ -72,6 +72,51 @@ const App = () => {
           <p>Time: {time.toFixed(1)} s</p>
         </div>
       )}
+
+      {/* Scientific Explanation */}
+      <section className="science-description">
+        <h2>Scientific Explanation</h2>
+        <p>
+          This simulation demonstrates the concept of gravitational acceleration, which is the rate at which objects accelerate towards a planet due to gravity. Gravitational acceleration is different for each planet or moon depending on their mass and size. On Earth, this acceleration is approximately 9.81 m/s², meaning an object will increase its velocity by 9.81 m/s every second as it falls.
+        </p>
+        <p>
+          The key equations used in this simulation are derived from Newton's laws of motion:
+        </p>
+        <ul>
+          <li><strong>Displacement (position):</strong> <i>s = 0.5 * a * t²</i></li>
+          <li><strong>Velocity:</strong> <i>v = a * t</i></li>
+        </ul>
+        <p>
+          In the simulation, the ball falls under constant acceleration, and its position is updated based on the gravitational acceleration of the selected celestial body. As the time progresses, the velocity increases, demonstrating how gravity accelerates the object towards the ground.
+        </p>
+        <p>
+          You can experiment with different planetary bodies from the dropdown, and observe how their unique gravity values affect the speed and fall of the ball.
+        </p>
+      </section>
+
+      {/* Assumptions */}
+      <section className="assumptions-description">
+        <h2>Assumptions</h2>
+        <p>
+          The simulation is based on several ideal assumptions to simplify the physical model. These assumptions are:
+        </p>
+        <ul>
+          <li><strong>Constant Gravitational Acceleration:</strong> The ball is assumed to fall under constant acceleration due to gravity. In reality, gravitational acceleration may vary slightly with altitude or position on the planet.</li>
+          <li><strong>Neglecting Air Resistance:</strong> The effect of air resistance is ignored. In reality, air resistance would slow down the falling object, especially at higher velocities.</li>
+          <li><strong>Point Mass:</strong> The ball is treated as a point mass, which means its size and shape do not affect its motion. This assumption simplifies calculations but does not account for rotational or shape-related forces.</li>
+          <li><strong>Vertical Motion Only:</strong> The simulation assumes the ball falls vertically downwards without any horizontal motion or tilt. The model ignores any angular velocity or rotational forces that may affect the object's trajectory.</li>
+          <li><strong>Instantaneous Start:</strong> The ball is assumed to start falling immediately from rest without any initial velocity or delay.</li>
+        </ul>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>© 2024</p>
+        <div className="social-links">
+          <a href="https://github.com/Sanindu/Gravity_Ball" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/sanindurathnayake/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </footer>
     </div>
   );
 };

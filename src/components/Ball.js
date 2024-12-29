@@ -10,7 +10,7 @@ const AnimatedBall = ({ acceleration, containerHeight, setVelocity, setTime }) =
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       updateTime((prevTime) => prevTime + 0.1);
-    }, 100); // Update every 100ms
+    }, 100);
 
     return () => clearInterval(intervalRef.current);
   }, []);
