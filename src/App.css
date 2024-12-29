@@ -1,69 +1,71 @@
 body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: radial-gradient(circle, #0d1b2a, #1b263b);
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  height: 500px;
-  width: 500px;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid white;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2rem;
   margin-bottom: 20px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+select, button {
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+select {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(47, 42, 42);
+}
+
+button {
+  background: linear-gradient(135deg, #302d2e, #5f585b);
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 .ball {
   width: 50px;
   height: 50px;
-  background-color: #ff4500;
+  background: radial-gradient(circle, #dfe2e7, #484545);
   border-radius: 50%;
   position: absolute;
-  box-shadow: 0 0 20px #ff4500;
-  transition: transform 0.1s ease-in-out;
+  top: 0;
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, 0); /* Align horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-label, button, select {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-select {
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #1b263b;
-  color: white;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #ff4500;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #d73a00;
-}
-
-.metrics {
+.info-panel {
   margin-top: 20px;
-  font-size: 16px;
-}
-
-.metrics p {
-  margin: 5px 0;
+  text-align: left;
 }

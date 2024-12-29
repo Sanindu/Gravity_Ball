@@ -38,13 +38,7 @@ const AnimatedBall = ({ acceleration, containerHeight, setVelocity, setTime }) =
   return (
     <div
       ref={ballRef}
-      style={{
-        width: '50px',
-        height: '50px',
-        borderRadius: '50%',
-        backgroundColor: 'blue',
-        position: 'absolute',
-      }}
+      className="ball"
     ></div>
   );
 };
