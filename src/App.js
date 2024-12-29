@@ -54,6 +54,7 @@ const App = () => {
         <span>Select a planet or moon:</span>
         <select
           value={acceleration}
+          disabled={start}
           onChange={(e) => setAcceleration(Number(e.target.value))}
         >
           {planets.map((planet) => (
@@ -70,10 +71,11 @@ const App = () => {
           <p>Acceleration (a): {acceleration} m/s²</p>
           <p>Velocity: {velocity.toFixed(2)} m/s</p>
           <p>Time: {time.toFixed(1)} s</p>
+          
         </div>
       )}
 
-      {/* Scientific Explanation */}
+     
       <section className="science-description">
         <h2>Scientific Explanation</h2>
         <p>
@@ -94,7 +96,7 @@ const App = () => {
         </p>
       </section>
 
-      {/* Assumptions */}
+ 
       <section className="assumptions-description">
         <h2>Assumptions</h2>
         <p>
@@ -109,7 +111,7 @@ const App = () => {
         </ul>
       </section>
 
-      {/* Footer */}
+ 
       <footer className="footer">
         <p>© 2024</p>
         <div className="social-links">
