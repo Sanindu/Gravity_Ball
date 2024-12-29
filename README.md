@@ -15,7 +15,7 @@ This project is a simple gravity simulation built using React, designed to visua
 This simulation demonstrates the concept of gravitational acceleration, which is the rate at which objects accelerate due to gravity. Gravitational acceleration varies depending on the celestial body (planet or moon) you choose. On Earth, this acceleration is approximately 9.81 m/s².
 
 The key equations used in this simulation are based on Newton's laws of motion:
-When the initial velocity is 0,
+When the initial velocity is 0 (u=0),
 - **Displacement (position)**:  
   \[
   s = 0.5 . at^2
