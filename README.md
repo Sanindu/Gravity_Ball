@@ -2,6 +2,7 @@
 
 This project is a simple gravity simulation built using React, designed to visually demonstrate how an object falls under the influence of gravity. The simulation allows users to select different celestial bodies (planets and moons) and observe how gravity affects an object’s motion. The velocity, time, and displacement of the falling object are displayed in real-time.
 
+![Loadiing Demo](gravity_demo.gif)
 ## Features
 
 - **Simulate gravity**: The simulation shows how an object accelerates towards the ground under different gravitational accelerations.
