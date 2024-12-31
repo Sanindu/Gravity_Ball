@@ -1,7 +1,7 @@
 # Gravity Simulation Project
-
+Try it out: ![](https://gravity.sanindu.co.uk/)
 This project is a simple gravity simulation built using React, designed to visually demonstrate how an object falls under the influence of gravity. The simulation allows users to select different celestial bodies (planets and moons) and observe how gravity affects an object’s motion. The velocity, time, and displacement of the falling object are displayed in real-time.
-Try it out: ![](gravity.sanindu.co.uk/)
+
 ![Loadiing Demo](clip_gravity.gif)
 ## Features
 
